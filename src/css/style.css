@@ -1,0 +1,311 @@
+/* ===> OPEN SANS <=== */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+/* ===> OPEN SANS <=== */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* ===> HEADER SECTION <=== */
+.header-container {
+    width: 100%;
+    height: 80px;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+
+}
+
+.header-container .last-logo-container {
+    display: flex;
+    gap: 21px;
+}
+
+
+
+.header-container .last-logo-container i {
+    font-size: 25px;
+    color: #454545;
+    cursor: pointer;
+}
+
+.header-container .nav-section {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-container .logo-section a img {
+    width: 130px;
+
+}
+
+.header-container .nav-section .list-container li .links {
+    position: relative;
+    font-weight: 400;
+    color: #454545;
+}
+
+.header-container .nav-section .list-container li i {
+    font-size: 11px;
+}
+
+
+
+.header-container .nav-section .list-container li .first-link {
+    width: 100%;
+    border-bottom: 1px solid #454545;
+
+}
+
+.header-container .nav-section .list-container li .links::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #454545;
+    width: 0;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.header-container .nav-section .list-container li .links:hover::before {
+    opacity: 1;
+    width: 100%;
+}
+
+
+
+.header-container .nav-section ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header-container .nav-section ul li {
+    font-size: 18px;
+    font-weight: 400;
+    color: #454545;
+}
+
+/* ===> SLIDER SECTION <=== */
+.slider-section {
+    padding: 10px 50px;
+
+}
+
+
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: grab;
+}
+
+.swiper-button-next {
+    position: absolute;
+    color: red;
+}
+
+/* ===> CARD SECTION <=== */
+.card-section {
+    width: 100%;
+    padding: 20px 70px;
+
+}
+
+
+.card-section article ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.card-section article ul li {
+    position: relative;
+    cursor: pointer;
+
+}
+
+.card-section article ul li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    border-bottom: 1px solid #454545;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.card-section article ul li:not(.disabled-list):hover::before {
+    opacity: 1;
+    width: 100%;
+}
+
+.card-section .disabled-list {
+    border-bottom: 1px solid #454545;
+}
+
+.card-container {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 15px;
+}
+
+.card-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.card-item .content {
+    position: absolute;
+    bottom: -45px;
+    width: 100%;
+    background-color: white;
+    height: 130px;
+    opacity: 0;
+    transition: .3s linear;
+    transition-delay: 0.09ms;
+    padding: 20px 0px;
+}
+
+.card-item .content h4 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #333;
+}
+
+.card-item .content a {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: #454545;
+    font-size: 16px;
+}
+
+.card-item:hover .content {
+    opacity: 1;
+    z-index: 1000;
+    transform: translateY(-40px);
+}
+
+/* FOOTER SECTION */
+footer {
+    height: 117px;
+    border-top: 1px solid #E5E5E5;
+    font-family: "Open Sans", sans-serif;
+    color: #818687;
+
+}
+
+.footer-content {
+    padding: 0px 80px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first-content {
+    font-size: 19px;
+    font-weight: 300;
+
+}
+
+.first-content a {
+    transition: all .3s ease-in-out;
+}
+
+.first-content a:hover {
+    color: #f6c0a5;
+}
+
+.footer-container .logo-section i {
+    font-size: 19px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.footer-content .logo-section {
+    display: flex;
+    gap: 15px;
+    padding-right: 40px;
+
+}
+
+.footer-container .logo-section i:hover {
+    color: #454545;
+}
+
+.last {
+    width: 50px;
+    height: 50px;
+    background-color: #f6c0a5;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+
+}
+
+.last span i {
+    color: #fff;
+    font-size: 20px;
+
+
+
+
+}
+
+.last:hover {
+    background-color: #333;
+    color: #fff;
+}
